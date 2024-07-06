@@ -7,4 +7,12 @@
 import requests
 import pprint
 
+parameter = {"q" : "html"}
+
+
+reslt = requests.get('https://api.github.com', params=parameter)
+
+print(reslt.status_code)
+
+print(reslt.json())
 
