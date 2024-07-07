@@ -7,10 +7,14 @@
 import requests
 import pprint
 
-parameter = {"userId" : 1}
+parameter = {
+    'title': 'foo',
+    'body': 'bar',
+    'userId': 1
+}
 
 
-reslt = requests.get('https://jsonplaceholder.typicode.com/posts', params=parameter, )
+reslt = requests.post('https://jsonplaceholder.typicode.com/posts', data=parameter, )
 
 print(reslt.status_code)
 
